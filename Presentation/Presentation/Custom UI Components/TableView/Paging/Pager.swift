@@ -44,9 +44,6 @@ public class Pager {
     
     public func start(reset: Bool = true) {
         tableView.start(reset: reset)
-        if withScrollButton {
-            tableView.buildScrollButton()
-        }
     }
 
     public func notifyItemsLoaded(count: Int) {

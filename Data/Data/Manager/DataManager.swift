@@ -6,15 +6,12 @@
 //
 
 import Foundation
+import SwiftyNet
 
 public class DataManager {
     public static func create() -> DataManager { DataManager() }
 
-//    public lazy var authRepo: AuthRepo = {
-//        AuthRepo.create()
-//    }()
-//    
-//    public lazy var homeRepo: HomeRepo = {
-//        HomeRepo.create()
-//    }()
+    public lazy var githubRouter: GithubRepo = {
+        GithubRepo(router: NetworkRouter())
+    }()
 }

@@ -15,6 +15,7 @@
 		FA3C73BA258637C8002014DD /* EXString.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3C73B7258637C8002014DD /* EXString.swift */; };
 		FA3C73BB258637C8002014DD /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3C73B8258637C8002014DD /* IntExtension.swift */; };
 		FA3C741B25863A9D002014DD /* ValidationManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3C741A25863A9D002014DD /* ValidationManger.swift */; };
+		FA795F8B263F1D2E002CD074 /* SearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA795F8A263F1D2E002CD074 /* SearchManager.swift */; };
 		FA7EBF722584920B00B7FD4E /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7EBF682584920B00B7FD4E /* Presentation.framework */; };
 		FA7EBF772584920B00B7FD4E /* PresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7EBF762584920B00B7FD4E /* PresentationTests.swift */; };
 		FA7EBF792584920B00B7FD4E /* Presentation.h in Headers */ = {isa = PBXBuildFile; fileRef = FA7EBF6B2584920B00B7FD4E /* Presentation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -124,6 +125,7 @@
 		FA3C73B7258637C8002014DD /* EXString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EXString.swift; sourceTree = "<group>"; };
 		FA3C73B8258637C8002014DD /* IntExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
 		FA3C741A25863A9D002014DD /* ValidationManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationManger.swift; sourceTree = "<group>"; };
+		FA795F8A263F1D2E002CD074 /* SearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchManager.swift; sourceTree = "<group>"; };
 		FA7EBF682584920B00B7FD4E /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA7EBF6B2584920B00B7FD4E /* Presentation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Presentation.h; sourceTree = "<group>"; };
 		FA7EBF6C2584920B00B7FD4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -428,6 +430,7 @@
 				FA7EC0B32584AF8800B7FD4E /* NotifyMessage.swift */,
 				FA7EC0B42584AF8800B7FD4E /* ZoomHelper.swift */,
 				FA7EC0B52584AF8800B7FD4E /* Activity.swift */,
+				FA795F8A263F1D2E002CD074 /* SearchManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -779,6 +782,7 @@
 				FAFA418025A48D5D00D2F376 /* ViewModel.swift in Sources */,
 				FA7EC07E2584AE7700B7FD4E /* DesignableTextField.swift in Sources */,
 				FA05329F25A93479003FE335 /* DatePickerViewController.swift in Sources */,
+				FA795F8B263F1D2E002CD074 /* SearchManager.swift in Sources */,
 				FAB6475D25A4E13800776781 /* Fonts.swift in Sources */,
 				FAFAFE1C25A5DCE500F282A2 /* LocaleInfo.swift in Sources */,
 				FA7EC09B2584AE7700B7FD4E /* UINavigationController+Ex.swift in Sources */,

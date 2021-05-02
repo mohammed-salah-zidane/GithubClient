@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct GitHubRepositoryItem: Decodable {
+public struct GitHubRepositoryItem: Codable {
     public let id: Int
     public let fullName: String
     public let description: String
@@ -25,5 +25,5 @@ public struct GitHubRepositoryItem: Decodable {
 }
 
 public struct SearchRepositoriesResponse: Codable {
-    public let items: [GitHubRepositoryItem]
+    public let items: [GitHubRepositoryItem]!
 }

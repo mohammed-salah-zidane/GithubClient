@@ -54,8 +54,11 @@ public class PagedTableView: UITableView {
     public weak var pager: Pager! {
         didSet {
             pager.tableView = self
+            if pager.withScrollButton {
+                buildScrollButton()
+            }
             if pager.withRefresher {
-               addSubview(refresher)
+                addSubview(refresher)
             }
         }
     }
@@ -87,8 +90,8 @@ extension PagedTableView {
             self.scrollButton.translatesAutoresizingMaskIntoConstraints = false
             UIApplication.getTopViewController()?.view.addSubview(self.scrollButton)
             self.scrollButton.snp.makeConstraints { (make) in
-                make.width.height.equalTo(40)
-                make.width.width.equalTo(40)
+                make.height.equalTo(40)
+                make.width.equalTo(40)
                 make.bottom.equalTo(self).inset(25)
                 make.trailing.equalTo(self).inset(30)
             }
@@ -105,20 +108,20 @@ extension PagedTableView {
         started = true
         // reset page number if refresh
         if reset {
-            page = -1
+            page = 1
             hasMoreItems = true
         }
-        
+
         // return if already loading or dont have any more data
         guard hasMoreItems, !isLoading else {
             return
         }
-        
+
         // start loading
         isLoading = true
-        
+
         addLoadingFooter()
-        
+
         pager.loadMore(calculateNext())
     }
     
@@ -136,32 +139,33 @@ extension PagedTableView {
             hasMoreItems = false
             tableFooterView = nil
         }
-        isLoading = false
-        refreshControl?.endRefreshing()
-        refresher.endRefreshing()
-        page = count
+        hideLoading()
+        page = page + 1
         reloadData()
-        hidLoading()
+        hideLoading()
         toggleScrollButton()
     }
-    
+
     private func addLoadingFooter() {
         let spinner = UIActivityIndicatorView(style: .gray)
         spinner.startAnimating()
         spinner.frame = CGRect(
-            x: CGFloat(0),
-            y: CGFloat(0),
-            width: bounds.width,
-            height: CGFloat(44)
+                x: CGFloat(0),
+                y: CGFloat(0),
+                width: bounds.width,
+                height: CGFloat(44)
         )
-        
+
         tableFooterView = spinner
         tableFooterView?.isHidden = false
     }
     
-    public func hidLoading() {
+    public func hideLoading() {
         isLoading = false
         tableFooterView = nil
+        isLoading = false
+        refreshControl?.endRefreshing()
+        refresher.endRefreshing()
     }
 }
 
@@ -215,25 +219,48 @@ extension PagedTableView: UITableViewDataSource, UITableViewDelegate {
 
 extension PagedTableView {
     
+   
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         toggleScrollButton()
+        guard isReachedEndOfScrollView(scrollView: scrollView) else {
+            return
+        }
         checkForLoadMore()
     }
-    
+
+
+    func isReachedEndOfScrollView(scrollView: UIScrollView) -> Bool {
+        guard ((scrollView.contentOffset.y + scrollView.frame.size.height) >= (scrollView.contentSize.height)) else {
+            return false
+        }
+        return true
+    }
+
     func checkForLoadMore() {
         guard started else {
             return
         }
-        
-        guard let indexPath = self.visibleCells.last?.indexPath else {
+
+        guard !isLoading else {
             return
         }
-        
-        guard hasMoreItems && indexPath.row == lastRow() - 1 else {
+
+        guard isConnected() else {
             return
         }
-        
+
+        //Start locading new data from here
         start(reset: false)
+    }
+    
+    func isConnected() -> Bool {
+        let status = ReachabilityManger.shared.connection
+        switch status {
+        case .none:
+            return false
+        case .cellular, .wifi:
+            return true
+        }
     }
     
     func toggleScrollButton() {

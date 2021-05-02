@@ -43,6 +43,8 @@
 		FA5F88AA25CCEF3B002F59C0 /* Manrope3-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA5F881725CCEF3B002F59C0 /* Manrope3-Regular.otf */; };
 		FA5F88AB25CCEF3B002F59C0 /* Manrope3-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA5F881825CCEF3B002F59C0 /* Manrope3-Bold.otf */; };
 		FA5F88AE25CCEF3B002F59C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5F881E25CCEF3B002F59C0 /* LaunchScreen.storyboard */; };
+		FA795F85263F1475002CD074 /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA795F83263F1475002CD074 /* RepoCell.swift */; };
+		FA795F86263F1475002CD074 /* RepoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA795F84263F1475002CD074 /* RepoCell.xib */; };
 		FA7EC1C02584B95E00B7FD4E /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7EC1BF2584B95E00B7FD4E /* Core.framework */; };
 		FA7EC1C42584B95E00B7FD4E /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7EC1C32584B95E00B7FD4E /* Presentation.framework */; };
 		FA8EA2A72585588F001B04E0 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7EC1C12584B95E00B7FD4E /* Data.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -51,8 +53,6 @@
 		FAAEDB5325CF562000648C4C /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEDB5225CF562000648C4C /* HomeVM.swift */; };
 		FAAEDB5725CF564500648C4C /* HomeVCBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEDB5625CF564500648C4C /* HomeVCBuilder.swift */; };
 		FAAEDB5B25CF574200648C4C /* HomeNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEDB5A25CF574200648C4C /* HomeNavigator.swift */; };
-		FAAEDBB325CFDEFE00648C4C /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEDBB125CFDEFE00648C4C /* UserCell.swift */; };
-		FAAEDBB425CFDEFE00648C4C /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAEDBB225CFDEFE00648C4C /* UserCell.xib */; };
 		FAAEDBB825CFE19D00648C4C /* HomeDataSrc.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAEDBB725CFE19D00648C4C /* HomeDataSrc.swift */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +133,8 @@
 		FA5F881825CCEF3B002F59C0 /* Manrope3-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope3-Bold.otf"; sourceTree = "<group>"; };
 		FA5F881F25CCEF3B002F59C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA5F888425CCEF3B002F59C0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA795F83263F1475002CD074 /* RepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
+		FA795F84263F1475002CD074 /* RepoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoCell.xib; sourceTree = "<group>"; };
 		FA7B04D09F03D03AE3524184 /* Pods-GithubClient-GithubClientUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubClient-GithubClientUITests.release.xcconfig"; path = "Target Support Files/Pods-GithubClient-GithubClientUITests/Pods-GithubClient-GithubClientUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FA7EC1BF2584B95E00B7FD4E /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA7EC1C12584B95E00B7FD4E /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,8 +146,6 @@
 		FAAEDB5225CF562000648C4C /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		FAAEDB5625CF564500648C4C /* HomeVCBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCBuilder.swift; sourceTree = "<group>"; };
 		FAAEDB5A25CF574200648C4C /* HomeNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigator.swift; sourceTree = "<group>"; };
-		FAAEDBB125CFDEFE00648C4C /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
-		FAAEDBB225CFDEFE00648C4C /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		FAAEDBB725CFE19D00648C4C /* HomeDataSrc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSrc.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -365,8 +365,8 @@
 		FAAEDB6425CF5C6E00648C4C /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				FAAEDBB125CFDEFE00648C4C /* UserCell.swift */,
-				FAAEDBB225CFDEFE00648C4C /* UserCell.xib */,
+				FA795F83263F1475002CD074 /* RepoCell.swift */,
+				FA795F84263F1475002CD074 /* RepoCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -484,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA5F88A425CCEF3B002F59C0 /* Manrope3-Semibold.otf in Resources */,
+				FA795F86263F1475002CD074 /* RepoCell.xib in Resources */,
 				FA5F88A025CCEF3B002F59C0 /* ArbFONTS-DINNextLTArabic-UltraLight.ttf in Resources */,
 				FA5F889925CCEF3B002F59C0 /* ArbFONTS-DINNextLTArabic-Black.ttf in Resources */,
 				FA5F88AB25CCEF3B002F59C0 /* Manrope3-Bold.otf in Resources */,
@@ -494,7 +495,6 @@
 				FA5F88AE25CCEF3B002F59C0 /* LaunchScreen.storyboard in Resources */,
 				FA5F88A225CCEF3B002F59C0 /* ArbFONTS-DINNextLTArabic-Medium.ttf in Resources */,
 				FA5F88A725CCEF3B002F59C0 /* Roboto-Thin.ttf in Resources */,
-				FAAEDBB425CFDEFE00648C4C /* UserCell.xib in Resources */,
 				FA5F889A25CCEF3B002F59C0 /* Roboto-Light.ttf in Resources */,
 				FA5F889E25CCEF3B002F59C0 /* ArbFONTS-DINNextLTArabic-Heavy.ttf in Resources */,
 				FA5F88A325CCEF3B002F59C0 /* Manrope3-Thin.otf in Resources */,
@@ -675,8 +675,8 @@
 				FAAEDB5325CF562000648C4C /* HomeVM.swift in Sources */,
 				FA5F888D25CCEF3B002F59C0 /* AppCoordinator.swift in Sources */,
 				FA5F889225CCEF3B002F59C0 /* Assets.swift in Sources */,
+				FA795F85263F1475002CD074 /* RepoCell.swift in Sources */,
 				FAAEDBB825CFE19D00648C4C /* HomeDataSrc.swift in Sources */,
-				FAAEDBB325CFDEFE00648C4C /* UserCell.swift in Sources */,
 				FAAEDB5725CF564500648C4C /* HomeVCBuilder.swift in Sources */,
 				FA5F888B25CCEF3B002F59C0 /* AppDelegate.swift in Sources */,
 				FA5F889025CCEF3B002F59C0 /* Coordinator.swift in Sources */,
