@@ -1,0 +1,6 @@
+framework module ModelsMapper {
+  umbrella header "ModelsMapper-umbrella.h"
+
+  export *
+  module * { export * }
+}
