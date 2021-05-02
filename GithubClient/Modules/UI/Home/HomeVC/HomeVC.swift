@@ -103,17 +103,10 @@ extension HomeVC: SearchManagerDelegate {
     func searchBarDidDismissed() {
         viewModel.setSearchTerm(text: "Swift")
         pager.start()
-        UIView.animate(withDuration: 0.33, animations: {
-            self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-            self.tableView.scrollToTop()
-        })
+        tableView.updateTableTopInset(top: 0)
     }
     
     func searchBarBeginEditing() {
-        UIView.animate(withDuration: 0.33, animations: {
-            // 64+44 is due because the navigation gets hidden and also because of the temp searchBar as tableHeaderView
-            self.tableView.contentInset = UIEdgeInsets(top: 60, left: 0, bottom: 0, right: 0)
-            self.tableView.scrollToTop()
-        })
+        tableView.updateTableTopInset(top: 60)
     }
 }

@@ -83,4 +83,11 @@ public extension UITableView
             }
         }
     }
+    
+    func updateTableTopInset(top: CGFloat) {
+        UIView.animate(withDuration: 0.33, animations: {
+            self.contentInset = UIEdgeInsets(top: top, left: 0, bottom: 0, right: 0)
+            self.scrollToTop()
+        })
+    }
 }
