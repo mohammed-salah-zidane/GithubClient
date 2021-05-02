@@ -13,7 +13,7 @@ class HomeVM: ViewModel
     var displayError: PublishSubject<String>
     var dataManager: DataManager
     var disposeBag: DisposeBag
-    var reposFetched = BehaviorRelay<Bool>(value: false)
+    var reposFetched = PublishSubject<Bool>()
     
     private var lastRequestItems: Int = -1
     private var repositories = [GitHubRepositoryItem]()
@@ -72,9 +72,10 @@ extension HomeVM {
                         self.repositories = []
                     }
                     self.updateRepos(repos: items)
-                    self.reposFetched.accept(true)
+                    self.reposFetched.onNext(true)
                 case .failure(let error):
                     self.handleError(error: error)
+                    self.reposFetched.onNext(false)
                 }
                 
             } onError: {[weak self] error in

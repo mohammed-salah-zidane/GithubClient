@@ -68,12 +68,9 @@ target 'GithubClient' do
   
   target 'GithubClientTests' do
     pod 'SwiftyNet'
-
+    pod 'RxSwift'
+    pod 'RxCocoa'
   end
-  target 'GithubClientUITests' do
-    # Pods for testing
-  end
-
 end
 
 post_install do |installer|

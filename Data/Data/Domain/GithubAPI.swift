@@ -9,31 +9,31 @@ import Foundation
 import SwiftyNet
 import Alamofire
 
-enum GithubAPI {
+public enum GithubAPI {
     case search(request: SearchRepositoriesRequest)
 }
 
 extension GithubAPI: NetworkRequest {
     
-    var path: String {
+    public var path: String {
         switch self {
         case .search:
             return "/search/repositories"
         }
     }
     
-    var baseUrl: URL {
+    public var baseUrl: URL {
         return Environments.shared.baseURL
     }
     
-    var method: HTTPMethod {
+    public var method: HTTPMethod {
         switch self {
         case .search:
             return .get
         }
     }
     
-    var parameters: Parameters? {
+    public var parameters: Parameters? {
         switch self {
         case .search(let request):
             var params = [String: Any]()
@@ -45,7 +45,7 @@ extension GithubAPI: NetworkRequest {
         }
     }
     
-    var parameterEncoding: RequestParameterEncoding? {
+    public var parameterEncoding: RequestParameterEncoding? {
         switch self {
         case .search:
             return .queryString

@@ -11,7 +11,7 @@ import SwiftyNet
 public class DataManager {
     public static func create() -> DataManager { DataManager() }
 
-    public lazy var githubRouter: GithubRepo = {
-        GithubRepo(router: NetworkRouter())
+    public lazy var githubRouter: GithubRequester = {
+        GithubRequester(router: NetworkRouter())
     }()
 }

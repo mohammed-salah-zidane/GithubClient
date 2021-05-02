@@ -10,7 +10,7 @@ import RxSwift
 import SwiftyNet
 import RxCocoa
 
-public class GithubRepo {
+public class GithubRequester {
     
     let router: NetworkRouter!
     

@@ -48,6 +48,16 @@
                ReferencedContainer = "container:RakebCaptain.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FA795FA1263F2FE7002CD074"
+               BuildableName = "GithubClientTests.xctest"
+               BlueprintName = "GithubClientTests"
+               ReferencedContainer = "container:GithubClient.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
