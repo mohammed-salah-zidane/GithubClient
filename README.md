@@ -4,8 +4,9 @@ Github client iOS app written in swift with modular architecture (MVVM and RxSwi
 # Implemented Using
 
 * MVVM with RxSwift
-* SwiftyNet for netwokring
+* [SwiftyNet](https://github.com/mohammed-salah-zidane/SwiftyNet) for netwokring
 * Coordinators (Navigators) pattern for app flow
+* Implement Unit Testing
 * Modular Archicture (App, Data, Core, Presentation)
 * Many design patterns (Builder, Factory, Repository, Singletone, Strategy, ...etc)
 * SOLID Principles
