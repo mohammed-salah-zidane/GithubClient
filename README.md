@@ -17,10 +17,6 @@ Github client iOS app written in swift with modular architecture (MVVM and RxSwi
 
 Pull or download the repo after that make  'pod install' command then you can run.
 
-# Note
-The Twitter API key have a limited requests so it may stop to return user followers, if this happened you have to change twitter api credentials.
-
-
 # Modular Architecture
 
   <img src="https://github.com/mohammed-salah-zidane/GithubClient/blob/main/blob/modular-arch-diagram.png" height="600">
